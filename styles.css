@@ -1,0 +1,69 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin-top: 50px;
+  background: whitesmoke;
+  color: red; /* Arsenal red */
+}
+
+/* Part 1: Button hover effect */
+.arsenal-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  background-color: #c8102e; /* Arsenal red */
+  color: white;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.arsenal-btn:hover {
+  background-color: blueviolet;
+  color: black; 
+  transform: scale(2.1) ;
+}
+
+/* Continuous ball animation */
+.ball {
+  width: 60px;
+  height: 60px;
+  background: white;
+  border: 5px solid #c8102e;
+  border-radius: 50%;
+  margin: 40px auto;
+  animation: bounce 2s infinite ease-in-out ;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(50px); }
+}
+
+/* Banner that slides in once */
+.banner {
+  margin-top: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  animation: slideIn 5s ease forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0); opacity: 1; }
+}
+/*Part 3*/
+#movingBox {
+  width: 110px;
+  height: 80px;
+  background-color: red;
+  color: white;
+  font-weight: bold; 
+  display: flex;  
+  animation: slide 10s linear infinite;
+}
+@keyframes slide {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(1400px); }
+}
